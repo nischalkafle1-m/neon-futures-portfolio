@@ -1,60 +1,80 @@
+
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const About = () => {
   return (
     <section id="about" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-neon-magenta glow-magenta mb-4">
-            About Me
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full glow-cyan"></div>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="space-y-6">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-bold text-neon-cyan glow-cyan mb-4">
+                About Me
+              </h2>
+              <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary rounded-full glow-cyan"></div>
+            </div>
+            
+            <div className="space-y-4 text-lg leading-relaxed">
+              <p className="text-muted-foreground">
+                Hi, I'm <span className="text-neon-magenta font-semibold">Nischal Kafle</span>, 
+                an aspiring data scientist with a passion for uncovering insights from data and 
+                building innovative solutions that make a difference.
+              </p>
+              
+              <p className="text-muted-foreground">
+                Currently diving deep into the world of data science, I'm learning Python, 
+                statistics, machine learning, and data visualization. My goal is to become 
+                proficient in transforming raw data into actionable insights that can drive 
+                meaningful decisions.
+              </p>
+              
+              <p className="text-muted-foreground">
+                When I'm not coding or analyzing data, you'll find me exploring the latest 
+                tech trends, working on creative projects, or planning my next learning adventure. 
+                I believe in the power of continuous learning and the exciting possibilities 
+                that emerge when technology meets creativity.
+              </p>
+            </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Profile Image */}
-          <div className="flex justify-center">
-            <div className="relative">
-              <div className="w-80 h-80 rounded-full overflow-hidden border-4 border-neon-cyan glow-cyan hover:glow-cyber transition-all duration-500">
-                <img 
-                  src={profilePhoto} 
-                  alt="Nischal Prasad Kafle"
-                  className="w-full h-full object-cover"
-                />
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6">
+              <div className="text-center p-4 bg-card/50 rounded-lg border border-neon-cyan/30">
+                <div className="text-2xl font-bold text-neon-cyan mb-1">2025</div>
+                <div className="text-sm text-muted-foreground">Started Journey</div>
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-accent rounded-full glow-green animate-pulse"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-secondary rounded-full glow-magenta animate-pulse" style={{ animationDelay: "0.5s" }}></div>
+              <div className="text-center p-4 bg-card/50 rounded-lg border border-neon-magenta/30">
+                <div className="text-2xl font-bold text-neon-magenta mb-1">3+</div>
+                <div className="text-sm text-muted-foreground">Skills Learning</div>
+              </div>
+              <div className="text-center p-4 bg-card/50 rounded-lg border border-accent/30 md:col-span-1 col-span-2">
+                <div className="text-2xl font-bold text-accent mb-1">∞</div>
+                <div className="text-sm text-muted-foreground">Curiosity Level</div>
+              </div>
             </div>
           </div>
 
-          {/* About Text */}
-          <div className="space-y-6">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Welcome to my digital realm! I'm <span className="text-neon-cyan font-semibold">Nischal Prasad Kafle</span>, 
-              a passionate student embarking on an exciting journey into the world of data science and technology.
-            </p>
-            
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Currently diving deep into the fascinating intersection of data, artificial intelligence, and web development. 
-              I believe in the power of technology to solve real-world problems and create meaningful impact.
-            </p>
-
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              When I'm not analyzing datasets or building applications, you'll find me exploring the latest tech trends, 
-              contributing to open-source projects, and constantly learning new skills to stay at the forefront of innovation.
-            </p>
-
-            {/* Personal stats */}
-            <div className="grid grid-cols-2 gap-6 mt-8">
-              <div className="text-center p-4 bg-card/50 rounded-lg border border-neon-cyan/30 hover-glow-cyan transition-all duration-300">
-                <div className="text-2xl font-bold text-neon-cyan">50+</div>
-                <div className="text-sm text-muted-foreground">Hours of Learning</div>
+          {/* Profile Image */}
+          <div className="relative lg:order-last order-first">
+            <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
+              {/* Glow effect background */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-accent/20 rounded-full blur-2xl animate-pulse"></div>
+              
+              {/* Main image container */}
+              <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-neon-cyan/50 glow-cyan">
+                <img 
+                  src={profilePhoto} 
+                  alt="Nischal Kafle"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-card/40 via-transparent to-transparent"></div>
               </div>
-              <div className="text-center p-4 bg-card/50 rounded-lg border border-neon-magenta/30 hover-glow-magenta transition-all duration-300">
-                <div className="text-2xl font-bold text-neon-magenta">5+</div>
-                <div className="text-sm text-muted-foreground">Projects Built</div>
-              </div>
+
+              {/* Decorative rings */}
+              <div className="absolute inset-0 rounded-full border-2 border-neon-magenta/30 scale-110 animate-spin" style={{ animationDuration: '20s' }}></div>
+              <div className="absolute inset-0 rounded-full border border-accent/20 scale-125 animate-spin" style={{ animationDuration: '15s', animationDirection: 'reverse' }}></div>
             </div>
           </div>
         </div>
