@@ -5,19 +5,19 @@ const Academic = () => {
   const education = [
     {
       degree: "Bachelor's Degree",
-      field: "Computer Science",
-      school: "Your University Name",
+      field: "Not Started",
+      school: "",
       location: "City, Country",
-      period: "2020 - 2024",
-      description: "Relevant coursework: Data Structures, Algorithms, Statistics, Database Systems"
+      period: "2025 - 2029",
+      description: ""
     },
     {
-      degree: "High School Diploma",
+      degree: "+2 ",
       field: "Science Stream",
-      school: "Your High School",
-      location: "City, Country", 
-      period: "2018 - 2020",
-      description: "Mathematics, Physics, Chemistry, Computer Science"
+      school: "Shree Panchayat Secondary School",
+      location: "Pathar,Morang, Nepal", 
+      period: "2023 - 2025",
+      description: "Mathematics, Physics, Chemistry"
     }
   ];
 
